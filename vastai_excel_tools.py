@@ -2,12 +2,14 @@
 Author: liu kang
 Date: 2022-08-28 19:14:36
 LastEditors: fade_away_shot
-LastEditTime: 2022-08-28 22:40:39
-FilePath: \myXlsx\vastai_excel_tools.py
+LastEditTime: 2022-08-28 23:33:41
+FilePath: \pythonTool\vastai_excel_tools.py
 Description: 
 
 Copyright (c) 2022 by fade_away_shot 654042016@qq.com, All Rights Reserved. 
 '''
+# https://www.h3blog.com/article/229/
+
 from openpyxl import load_workbook, Workbook
 import datetime
 
@@ -25,6 +27,7 @@ class Excel_manager():
         self._list_data = []
         self._file_title = []
         self._sheet_name = _sheet
+        self._check_result =[]
     def load_excel(self):
         for i, _file in enumerate(self._file_list):
             _wb = load_workbook(_file)
@@ -37,6 +40,7 @@ class Excel_manager():
             _wb.close()
     def check_history_result(self):
             pass
+    
     def check_self_result(self):
             pass
         
